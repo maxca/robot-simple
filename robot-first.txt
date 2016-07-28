@@ -1,0 +1,45 @@
+*** Settings ***
+
+Documentation   Samark Chaisangugn has been checking profile to test simple
+...             tests are data-driven by they nature. They use a single
+...             keyword, specified with Test Template setting, that is called
+...             with different arguments to cover different scenarios.
+Suite Setup     Open Browser Basic
+Suite Teardown  Close Browser
+Resource        resource.txt
+
+
+*** Test Cases ***              keyword      result
+Check Insert Keyword By name samark
+	[Tags]	insert keyword samark
+	Input Keyword For Search	samark
+	Submit Search Button	samark
+
+Check Insert Keyword By name google
+	[Tags]		insert keyword google
+	Input Keyword For Search	maxca789
+	Submit Search Button	maxca789
+
+Check Insert Keyword By name balance
+	[Tags]		insert keyword balance
+	Input Keyword For Search	balance
+	Submit Search Button	balance
+
+Check Insert Keyword By name back
+	[Tags]		insert keyword back
+	Input Keyword For Search	back
+	Submit Search Button	back
+
+Check Insert Keyword By name demo
+	[Tags]		insert keyword demo
+	Input Keyword For Search	demo
+	Submit Search Button	demo
+
+Check Insert Keyword By name game
+	[Tags]		insert keyword game
+	Input Keyword For Search	game
+	Submit Search Button	game
+
+
+*** Keywords ***
+
